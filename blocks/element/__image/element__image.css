@@ -1,4 +1,6 @@
 .element__image {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  min-width: 282px;
+  height: 282px;
 }
