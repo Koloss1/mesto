@@ -1,0 +1,21 @@
+.form__submit {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 48px 0 0 0;
+  background: #000000;
+  border-radius: 2px;
+  min-height: 50px;
+  border: none;
+}
+
+.form__submit:hover {
+  transition: opacity 0.3s linear;
+  opacity: 0.8;
+  cursor: pointer;
+}
