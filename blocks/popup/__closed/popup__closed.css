@@ -1,8 +1,11 @@
 .popup__closed {
-  background: url(../../../images/Close\ Icon.svg);
+  background: url(../../../images/Close-Icon.svg) no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center;
+  background-size: cover;
   border: none;
-  min-width: 32px;
-  min-height: 32px;
+  width: 32px;
+  height: 32px;
   padding: 0;
   position: absolute;
   right: -40px;
@@ -11,16 +14,15 @@
 
 .popup__closed:hover {
   transition: opacity 0.3s linear;
-  opacity: 0.8;
+  opacity: 0.6;
   cursor: pointer;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 560px) {
   .popup__closed {
     right: 0;
     top: -36px;
-    min-width: 20px;
-    min-height: 20px;
-    background: url(../../../images/Close\ Icon-mobile.svg);
-  }
+    width: 20px;
+    height: 20px;
+    }
 }

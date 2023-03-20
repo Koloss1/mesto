@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"></html>
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <meta name="keywords" content="html, css, проект Mesto">
   <meta name="author" content="Быков Алексей">
   <link rel="stylesheet" href="./pages/index.css">
-  <title>Mesto</title>
+  <title lang="en">Mesto</title>
 </head>
 
 <body class="root">
@@ -29,76 +29,79 @@
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
       </div>
-      <button class="profile__add-button" type="button">
+      <button class="profile__add-button" type="button" aria-label="лайк">
       </button>
     </section>
 
     <section class="elements">
-      <li class="element">
-        <img class="element__image" src="./images/butterfly.jpg" alt="бабочка">
-        <div class="element__bottom-card">
-          <h2 class="element__title">Бабочка</h2>
-          <button class="element__like">
-          </button>
-        </div>
-      </li>
-      <li class="element">
-        <img class="element__image" src="./images/deer.jpg" alt="олень">
-        <div class="element__bottom-card">
-          <h2 class="element__title">Олень</h2>
-          <button class="element__like">
-          </button>
-        </div>
-      </li>
-      <li class="element">
-        <img class="element__image" src="./images/forest.jpg" alt="лес">
-        <div class="element__bottom-card">
-          <h2 class="element__title">Лесная опушка</h2>
-          <button class="element__like">
-          </button>
-        </div>
-      </li>
-      <li class="element">
-        <img class="element__image" src="./images/jelifish.jpg" alt="медуза">
-        <div class="element__bottom-card">
-          <h2 class="element__title">Красная медуза</h2>
-          <button class="element__like">
-          </button>
-        </div>
-      </li>
-      <li class="element">
-        <img class="element__image" src="./images/monkey.jpg" alt="обезьяна">
-        <div class="element__bottom-card">
-          <h2 class="element__title">Мартышка</h2>
-          <button class="element__like">
-          </button>
-        </div>
-      </li>
-      <li class="element">
-        <img class="element__image" src="./images/river.jpg" alt="река">
-        <div class="element__bottom-card">
-          <h2 class="element__title">Речной пейзаж</h2>
-          <button class="element__like">
-          </button>
-        </div>
-      </li>
+      <ul class="elements__list">
+        <li class="element">
+          <img class="element__image" src="./images/butterfly.jpg" alt="бабочка">
+          <div class="element__bottom-card">
+            <h2 class="element__title">Бабочка</h2>
+            <button class="element__like" type="button" aria-label="лайк">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img class="element__image" src="./images/deer.jpg" alt="олень">
+          <div class="element__bottom-card">
+            <h2 class="element__title">Олень</h2>
+            <button class="element__like" type="button" aria-label="лайк">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img class="element__image" src="./images/forest.jpg" alt="лес">
+          <div class="element__bottom-card">
+            <h2 class="element__title">Лесная опушка</h2>
+            <button class="element__like" type="button" aria-label="лайк">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img class="element__image" src="./images/jelifish.jpg" alt="медуза">
+          <div class="element__bottom-card">
+            <h2 class="element__title">Красная медуза</h2>
+            <button class="element__like" type="button" aria-label="лайк">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img class="element__image" src="./images/monkey.jpg" alt="обезьяна">
+          <div class="element__bottom-card">
+            <h2 class="element__title">Мартышка</h2>
+            <button class="element__like" type="button" aria-label="лайк">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img class="element__image" src="./images/river.jpg" alt="река">
+          <div class="element__bottom-card">
+            <h2 class="element__title">Речной пейзаж</h2>
+            <button class="element__like" type="button" aria-label="лайк">
+            </button>
+          </div>
+        </li>
+      </ul>
     </section>
 
   </main>
 
   <footer class="footer">
-    <h2 class="footer__title">© 2020 Mesto Russia</h2>
+    <p class="footer__title" lang="en">© 2020 Mesto Russia</p>
   </footer>
 
   <section class="popup">
     <div class="popup__container">
       <button class="popup__closed" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form name="edit-form" action="#" class="popup__form form">
+      <form name="edit-form" action="#" class="form">
         <fieldset class="form__set">
-          <input name="username" id="pInputName" value="" class="form__input">
-          <input name="job" id="pInputJob" value="" class="form__input">
-          <button type="submit" id="pSaveButton" class="form__submit">Сохранить</button>
+          <input name="username" value="" class="form__input form__input_type_name" type="text"
+            placeholder="Введите имя">
+          <input name="job" value="" class="form__input form__input_type_job" type="text" placeholder="Ваша должность">
+          <button type="submit" class="form__submit">Сохранить</button>
         </fieldset>
       </form>
     </div>
@@ -107,3 +110,5 @@
   <script src="./scripts/index.js"></script>
 
 </body>
+
+</html>

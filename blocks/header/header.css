@@ -1,10 +1,10 @@
 .header {
-  border-bottom: 1px solid rgba(54,54,54,.7);
-  min-height: 5.78125vw;
+  border-bottom: 1px solid rgba(84,84,84,.7);
+  padding-bottom: 41px;
 }
 
 @media (max-width: 425px) {
   .header {
-    min-height: 17.5vw;
-  }
+    padding-bottom: 31.6px;
+}
  }

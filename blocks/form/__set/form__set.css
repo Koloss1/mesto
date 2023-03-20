@@ -7,7 +7,7 @@
   max-width: 358px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 560px) {
   .form__set {
     width: 238px;
   }

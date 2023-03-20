@@ -1,16 +1,15 @@
 .element__like {
   align-self: center;
-  background: url(../../../images/Group.svg);
+  background: transparent no-repeat;
+  background-image: url(../../../images/Group.svg);
   border: none;
-  min-height: 19px;
-  min-width: 22px;
+  height: 19px;
+  width: 22px;
+  cursor: pointer;
+  padding: 0;
 }
 
 .element__like:hover {
   transition: opacity 0.3s linear;
-  opacity: 0.6;
-}
-
-.element__like:active {
-  background: url(../../../images/black-like.svg);
+  opacity: 0.5;
 }
