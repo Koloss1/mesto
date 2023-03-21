@@ -1,4 +1,4 @@
-.element__like {
+.elements__like {
   align-self: center;
   background: transparent no-repeat;
   background-image: url(../../../images/Group.svg);
@@ -7,9 +7,11 @@
   width: 22px;
   cursor: pointer;
   padding: 0;
+  background-size: cover;
+  background-position: center;
 }
 
-.element__like:hover {
+.elements__like:hover {
   transition: opacity 0.3s linear;
   opacity: 0.5;
 }
