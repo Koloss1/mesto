@@ -16,8 +16,8 @@ const imageLink = cardTemplate.querySelector(".elements__image");
 const formEditProfile = popupEditProfile.querySelector(".form");
 const formCardsAdd = popupCardsAdd.querySelector(".form");
 
-const imageOpenPopup = document.querySelector('.popup__image-open');
-const TextOpenPopup = document.querySelector('.popup__text-open');
+const imageZoomPopup = document.querySelector('.popup__image-open');
+const captionImagePopup = document.querySelector('.popup__text-open');
 
 const initialCards = [
   {
@@ -140,9 +140,9 @@ const addCard = function (item) {
   }
 
   cardLink.addEventListener('click', function () {
-    imageOpenPopup.src = item.link;
-    imageOpenPopup.alt = item.name;
-    TextOpenPopup.textContent = item.name;
+    imageZoomPopup.src = item.link;
+    imageZoomPopup.alt = item.name;
+    captionImagePopup.textContent = item.name;
     openPopupTemplate(popupImage);
   })
 
