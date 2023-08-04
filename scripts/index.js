@@ -1,11 +1,11 @@
 //переменные
 const popupElements = document.querySelector('.popup');
 
-const popupCloseButtonElement = document.querySelectorAll('.popup__button-close');
+const popupCloseButtonElements = document.querySelectorAll('.popup__button-close');
 const profileEditButtonElement = document.querySelector('.profile__edit-button');
 const profileAddButtonElement = document.querySelector('.profile__add-button');
-const inputName = document.querySelector('.profile__title');
-const inputJob = document.querySelector('.profile__subtitle');
+const profileName = document.querySelector('.profile__title');
+const profileJob = document.querySelector('.profile__subtitle');
 const inputNameNew = popupElements.querySelector('.popup__input_type_name');
 const inputJobNew = popupElements.querySelector('.popup__input_type_occupation');
 
@@ -23,7 +23,7 @@ const imagePopupCaption = imagePopupElement.querySelector('.figure__caption');
 const imagePopupBoxElement = imagePopupElement.querySelector('.popup-image__box');
 
 const elementsElement = document.querySelector('.elements__container');
-const cardTemplate = document.querySelector('#cardTemplate').content;
+const cardTemplate = document.querySelector('.Template').content;
 
 const submitProfileElement = popupProfileElement.querySelector('.popup__button-submit');
 const inputProfileForm = popupProfileElement.querySelectorAll('.popup__input');
@@ -40,8 +40,8 @@ function openPopup (popup){
 
 profileEditButtonElement.addEventListener('click', () => {
   resetErrorForm(formProfileElement);
-  inputNameNew.value = inputName.textContent;
-  inputJobNew.value = inputJob.textContent;
+  inputNameNew.value = profileName.textContent;
+  inputJobNew.value = profileJob.textContent;
   toggleButton(inputProfileForm, submitProfileElement, validationConfig.inactiveButtonClass)
   openPopup(popupProfileElement);
 });
@@ -52,7 +52,7 @@ function closePopup (popup){
   document.removeEventListener('keydown', closePopupEscape);
 }
 
-popupCloseButtonElement.forEach((element) => {
+popupCloseButtonElements.forEach((element) => {
   const popup = element.closest('.popup');
   element.addEventListener('click', () => {
     closePopup(popup);
@@ -86,11 +86,11 @@ imagePopupElement.addEventListener('click', (evt) => {
   closePopupOverlay(evt);
 })
 
-//Добавление новых данных и сохранение 
+//Добавление новых данных и сохранение
 formProfileElement.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  inputName.textContent = inputNameNew.value;
-  inputJob.textContent = inputJobNew.value;
+  profileName.textContent = inputNameNew.value;
+  profileJob.textContent = inputJobNew.value;
   closePopup(popupProfileElement);
 });
 
