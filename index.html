@@ -13,88 +13,92 @@
 
 <body class="page">
   <header class="header">
-   <img class="header__logo" alt="Логотип Место" src="./image/logo-1.svg">
- </header>
+    <img class="header__logo" alt="Логотип Место" src="./image/logo-1.svg">
+  </header>
 
- <main class="content">
-   <section class="profile">
-     <img src="./image/image-1.jpg" alt="Аватар Жак-Ива Кусто" class="profile__avatar">
-     <div class="profile__info">
-       <div class="profile__info-case">
-         <h1 class="profile__title">Жак-Ив Кусто</h1>
-         <button class="profile__edit-button" type="button"></button>
-       </div>
-       <p class="profile__subtitle">Исследователь океана</p>
-     </div>
-     <button class="profile__add-button" type="button"></button>
-   </section>
+  <main class="content">
+    <section class="profile">
+      <img src="./image/image-1.jpg" alt="Аватар Профиля" class="profile__avatar">
+      <div class="profile__info">
+        <div class="profile__info-case">
+          <h1 class="profile__title">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button" type="button"></button>
+        </div>
+        <p class="profile__subtitle">Исследователь океана</p>
+      </div>
+      <button class="profile__add-button" type="button"></button>
+    </section>
 
-   <section class="elements">
-     <ul class="elements__container"></ul>
-   </section>
+    <section class="elements">
+      <ul class="elements__container"></ul>
+    </section>
 
- </main>
- <footer class="footer">
-   <p class="footer__copyrigh">&copy; 2023 Mesto Russia</p>
- </footer>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyrigh">&copy; 2023 Mesto Russia</p>
+  </footer>
 
- <div class="popup profile-popup">
-   <div class="popup__box">
-     <button class="popup__button-close" type="button"></button>
-     <form class="popup__form" name="popupEditForm" method="POST" novalidate>
-       <h2 class="popup__title">Редактировать профиль</h2>
-       <div class="popup__input-cover">
-         <input class="popup__input popup__input_type_name" type="text" name="name" id="name" minlength="2" maxlength="40" placeholder="Имя" required>
-         <span class="popup__error popup__error_type_name"></span>
-       </div>
-       <div class="popup__input-cover">
-         <input class="popup__input popup__input_type_occupation" type="text" name="occupation" id="occupation" minlength="2" maxlength="200" placeholder="О себе" required>
-         <span class="popup__error popup__error_type_occupation"></span>
-     </div>
-       <button class="popup__button-submit" type="submit">Сохранить</button>
-     </form>
-   </div>
- </div>
+  <div class="popup profile-popup">
+    <div class="popup__box">
+      <button class="popup__button-close" type="button"></button>
+      <form class="popup__form" name="popupEditForm" method="POST" novalidate>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <div class="popup__input-cover">
+          <input class="popup__input popup__input_type_name" type="text" name="name" id="name" minlength="2"
+            maxlength="40" placeholder="Имя" required>
+          <span class="popup__error popup__error_type_name"></span>
+        </div>
+        <div class="popup__input-cover">
+          <input class="popup__input popup__input_type_occupation" type="text" name="occupation" id="occupation"
+            minlength="2" maxlength="200" placeholder="О себе" required>
+          <span class="popup__error popup__error_type_occupation"></span>
+        </div>
+        <button class="popup__button-submit" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
 
- <div class="popup add-popup">
-   <div class="popup__box">
-     <button class="popup__button-close" type="button"></button>
-     <form class="popup__form" name="popupAddForm" method="POST" novalidate>
-       <h2 class="popup__title">Новое место</h2>
-       <div class="popup__input-cover">
-         <input class="popup__input popup__input_type_title" type="text" name="title" id="title" minlength="2" maxlength="30" placeholder="Название" required>
-         <span class="popup__error popup__error_type_title"></span>
-       </div>
-       <div class="popup__input-cover">
-         <input class="popup__input popup__input_type_link" type="url" name="link" id="url" placeholder="Ссылка на картинку" required>
-         <span class="popup__error popup__error_type_link"></span>
-       </div>
-         <button class="popup__button-submit" type="submit">Создать</button>
-     </form>
-   </div>
- </div>
+  <div class="popup add-popup">
+    <div class="popup__box">
+      <button class="popup__button-close" type="button"></button>
+      <form class="popup__form" name="popupAddForm" method="POST" novalidate>
+        <h2 class="popup__title">Новое место</h2>
+        <div class="popup__input-cover">
+          <input class="popup__input popup__input_type_title" type="text" name="title" id="title" minlength="2"
+            maxlength="30" placeholder="Название" required>
+          <span class="popup__error popup__error_type_title"></span>
+        </div>
+        <div class="popup__input-cover">
+          <input class="popup__input popup__input_type_link" type="url" name="link" id="url"
+            placeholder="Ссылка на картинку" required>
+          <span class="popup__error popup__error_type_link"></span>
+        </div>
+        <button class="popup__button-submit" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
 
- <div class="popup popup-image">
-   <div class="popup__image-box">
-     <button class="popup__button-close" type="button"></button>
-     <figure class="figure">
-       <img src="#" alt="#" class="figure__image">
-       <figcaption class="figure__caption"></figcaption>
-     </figure>
-   </div>
- </div>
+  <div class="popup popup-image">
+    <div class="popup__image-box">
+      <button class="popup__button-close" type="button"></button>
+      <figure class="figure">
+        <img src="#" alt="#" class="figure__image">
+        <figcaption class="figure__caption"></figcaption>
+      </figure>
+    </div>
+  </div>
 
- <template class="Template">
-     <li class="elements__element">
-       <button class="elements__delete-button" type="button" aria-label="Удалить"></button>
-       <img class="elements__image" src="#" alt="#">
-       <div class="elements__element-case">
-           <h2 class="elements__name"></h2>
-           <button class="elements__like-button" type="button" aria-label="Нравится"></button>
-       </div>
-     </li>
+  <template class="Template">
+    <li class="elements__element">
+      <button class="elements__delete-button" type="button" aria-label="Удалить"></button>
+      <img class="elements__image" src="#" alt="#">
+      <div class="elements__element-case">
+        <h2 class="elements__name"></h2>
+        <button class="elements__like-button" type="button" aria-label="Нравится"></button>
+      </div>
+    </li>
 
- </template>
+  </template>
 
   <script src="./scripts/validation.js"></script>
   <script src="./scripts/cards.js"></script>

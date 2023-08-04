@@ -33,7 +33,7 @@ const inputAddForm = popupAddElement.querySelectorAll('.popup__input');
 
 
 //открытие попап
-function openPopup (popup){
+function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupEscape);
 }
@@ -47,7 +47,7 @@ profileEditButtonElement.addEventListener('click', () => {
 });
 
 //закрытие попап
-function closePopup (popup){
+function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closePopupEscape);
 }
@@ -60,7 +60,7 @@ popupCloseButtonElements.forEach((element) => {
 });
 
 //закрытие на esc
-function closePopupEscape(evt){
+function closePopupEscape(evt) {
   if (evt.key === 'Escape') {
     const popupOpened = document.querySelector('.popup_opened');
     closePopup(popupOpened);
@@ -68,8 +68,8 @@ function closePopupEscape(evt){
 }
 
 //закрытие по оверлею
-function closePopupOverlay(evt){
-  if (evt.target === evt.currentTarget){
+function closePopupOverlay(evt) {
+  if (evt.target === evt.currentTarget) {
     closePopup(evt.target);
   }
 };
@@ -103,7 +103,7 @@ profileAddButtonElement.addEventListener('click', () => {
 })
 
 //карточки
-function newCard(cardData){
+function newCard(cardData) {
   const cardElement = cardTemplate.querySelector('.elements__element').cloneNode(true);
   const imageElement = cardElement.querySelector('.elements__image');
   const deleteElement = cardElement.querySelector('.elements__delete-button');
@@ -130,7 +130,7 @@ initialCards.forEach((element) => {
 
 formAddElement.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const objectNewCardInfo = {name: inputTitle.value, link: inputLink.value};
+  const objectNewCardInfo = { name: inputTitle.value, link: inputLink.value };
   elementsElement.prepend(newCard(objectNewCardInfo));
   closePopup(popupAddElement);
   evt.target.reset();
