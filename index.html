@@ -40,18 +40,21 @@
   </main>
 
   <footer class="footer">
-    <p class="footer__title" lang="en">© 2020 Mesto Russia</p>
+    <p class="footer__title" lang="en">© 2023 Mesto Russia</p>
   </footer>
 
   <section class="popup popup_edit-info">
     <div class="popup__container">
       <button class="popup__closed" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form name="edit-form" action="#" class="form">
+      <form class="form" name="edit-form" action="#" method="POST" novalidate>
         <fieldset class="form__set">
           <input name="username" value="" class="form__input form__input_type_name" type="text"
-            placeholder="Введите имя">
-          <input name="job" value="" class="form__input form__input_type_job" type="text" placeholder="Ваша должность">
+            placeholder="Введите имя" minlength="2" maxlength="40" required>
+          <span class="form__error form__error_type_name"></span>
+          <input name="job" value="" class="form__input form__input_type_job" type="text" placeholder="Ваша должность"
+            minlength="2" maxlength="40" required>
+          <span class="form__error form__error_type_job"></span>
           <button type="submit" class="form__submit">Сохранить</button>
         </fieldset>
       </form>
@@ -62,11 +65,14 @@
     <div class="popup__container">
       <button class="popup__closed" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form name="edit-form" action="#" class="form">
+      <form class="form" name="edit-form" action="#" method="POST" novalidate>
         <fieldset class="form__set">
-          <input name="name" value="" class="form__input form__input_type_mesto" type="text" placeholder="Название">
+          <input name="name" value="" class="form__input form__input_type_mesto" type="text" placeholder="Название"
+            minlength="2" maxlength="40" required>
+          <span class="form__error form__error_type_title"></span>
           <input name="link" value="" class="form__input form__input_type_src" type="text"
-            placeholder="Ссылка на картинку">
+            placeholder="Ссылка на картинку" minlength="2" maxlength="40" required>
+          <span class="form__error form__error_type_link"></span>
           <button type="submit" class="form__submit">Создать</button>
         </fieldset>
       </form>
@@ -97,8 +103,9 @@
     </li>
   </template>
 
+  <script src="./scripts/validation.js"></script>
+  <script src="./scripts/cards.js"></script>
   <script src="./scripts/index.js"></script>
-
 </body>
 
 </html>
