@@ -1,8 +1,8 @@
-.elements__image {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  width: 282px;
+.elements__image{
   height: 282px;
+  width: 282px;
   object-fit: cover;
-  display: block;
+  object-position: center;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }

@@ -1,21 +1,20 @@
-.profile__title {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 42px;
-  line-height: 48px;
-  color: #FFFFFF;
+.profile__title{
   margin: 0;
+  max-width: 294px;
+  color: white;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 48px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 294px;
 }
 
-@media (max-width:425px) {
-  .profile__title {
+@media screen and (max-width: 1024px) {
+  .profile__title{
+    max-width: 189px;
     font-size: 27px;
-    line-height: 33px;
-    text-align: center;
+    line-height: 32.68px;
+    margin-top: 26px;
   }
 }

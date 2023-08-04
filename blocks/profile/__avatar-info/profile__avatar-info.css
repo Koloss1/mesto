@@ -1,9 +1,0 @@
-.profile__avatar-info {
-  display: flex;
-}
-
-@media (max-width: 600px) {
-  .profile__avatar-info {
-    flex-direction: column;
-  }
- }

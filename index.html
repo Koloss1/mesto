@@ -11,97 +11,90 @@
   <title lang="en">Mesto</title>
 </head>
 
-<body class="root">
-
+<body class="page">
   <header class="header">
-    <img class="header__logo" src="./images/Vector.svg" alt="Логотип">
-  </header>
+   <img class="header__logo" alt="Логотип Место" src="./image/logo-1.svg">
+ </header>
 
-  <main>
+ <main class="content">
+   <section class="profile">
+     <img src="./image/image-1.jpg" alt="Аватар Жак-Ива Кусто" class="profile__avatar">
+     <div class="profile__info">
+       <div class="profile__info-case">
+         <h1 class="profile__title">Жак-Ив Кусто</h1>
+         <button class="profile__edit-button" type="button"></button>
+       </div>
+       <p class="profile__subtitle">Исследователь океана</p>
+     </div>
+     <button class="profile__add-button" type="button"></button>
+   </section>
 
-    <section class="profile">
-      <div class="profile__avatar-info">
-        <img class="profile__avatar" src="./images/image.svg" alt="Аватарка">
-        <div class="profile__info">
-          <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="profile__edit-button" type="button">
-          </button>
-          <p class="profile__subtitle">Исследователь океана</p>
-        </div>
-      </div>
-      <button class="profile__add-button" type="button" aria-label="добавить-карточку">
-      </button>
-    </section>
+   <section class="elements">
+     <ul class="elements__container"></ul>
+   </section>
 
-    <section class="elements">
-      <ul class="elements__list"></ul>
-    </section>
+ </main>
+ <footer class="footer">
+   <p class="footer__copyrigh">&copy; 2023 Mesto Russia</p>
+ </footer>
 
-  </main>
+ <div class="popup profile-popup">
+   <div class="popup__box">
+     <button class="popup__button-close" type="button"></button>
+     <form class="popup__form" name="popupEditForm" method="POST" novalidate>
+       <h2 class="popup__title">Редактировать профиль</h2>
+       <div class="popup__input-cover">
+         <input class="popup__input popup__input_type_name" type="text" name="name" id="name" minlength="2" maxlength="40" placeholder="Имя" required>
+         <span class="popup__error popup__error_type_name"></span>
+       </div>
+       <div class="popup__input-cover">
+         <input class="popup__input popup__input_type_occupation" type="text" name="occupation" id="occupation" minlength="2" maxlength="200" placeholder="О себе" required>
+         <span class="popup__error popup__error_type_occupation"></span>
+     </div>
+       <button class="popup__button-submit" type="submit">Сохранить</button>
+     </form>
+   </div>
+ </div>
 
-  <footer class="footer">
-    <p class="footer__title" lang="en">© 2023 Mesto Russia</p>
-  </footer>
+ <div class="popup add-popup">
+   <div class="popup__box">
+     <button class="popup__button-close" type="button"></button>
+     <form class="popup__form" name="popupAddForm" method="POST" novalidate>
+       <h2 class="popup__title">Новое место</h2>
+       <div class="popup__input-cover">
+         <input class="popup__input popup__input_type_title" type="text" name="title" id="title" minlength="2" maxlength="30" placeholder="Название" required>
+         <span class="popup__error popup__error_type_title"></span>
+       </div>
+       <div class="popup__input-cover">
+         <input class="popup__input popup__input_type_link" type="url" name="link" id="url" placeholder="Ссылка на картинку" required>
+         <span class="popup__error popup__error_type_link"></span>
+       </div>
+         <button class="popup__button-submit" type="submit">Создать</button>
+     </form>
+   </div>
+ </div>
 
-  <section class="popup popup_edit-info">
-    <div class="popup__container">
-      <button class="popup__closed" type="button"></button>
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="form" name="edit-form" action="#" method="POST" novalidate>
-        <fieldset class="form__set">
-          <input name="username" value="" class="form__input form__input_type_name" type="text"
-            placeholder="Введите имя" minlength="2" maxlength="40" required>
-          <span class="form__error form__error_type_name"></span>
-          <input name="job" value="" class="form__input form__input_type_job" type="text" placeholder="Ваша должность"
-            minlength="2" maxlength="40" required>
-          <span class="form__error form__error_type_job"></span>
-          <button type="submit" class="form__submit">Сохранить</button>
-        </fieldset>
-      </form>
-    </div>
-  </section>
+ <div class="popup popup-image">
+   <div class="popup__image-box">
+     <button class="popup__button-close" type="button"></button>
+     <figure class="figure">
+       <img src="#" alt="#" class="figure__image">
+       <figcaption class="figure__caption"></figcaption>
+     </figure>
+   </div>
+ </div>
 
-  <section class="popup popup_add-cards">
-    <div class="popup__container">
-      <button class="popup__closed" type="button"></button>
-      <h2 class="popup__title">Новое место</h2>
-      <form class="form" name="edit-form" action="#" method="POST" novalidate>
-        <fieldset class="form__set">
-          <input name="name" value="" class="form__input form__input_type_mesto" type="text" placeholder="Название"
-            minlength="2" maxlength="40" required>
-          <span class="form__error form__error_type_title"></span>
-          <input name="link" value="" class="form__input form__input_type_src" type="text"
-            placeholder="Ссылка на картинку" minlength="2" maxlength="40" required>
-          <span class="form__error form__error_type_link"></span>
-          <button type="submit" class="form__submit">Создать</button>
-        </fieldset>
-      </form>
-    </div>
-  </section>
+ <template id="cardTemplate">
+     <li class="elements__element">
+       <button class="elements__delete-button" type="button" aria-label="Удалить"></button>
+       <img class="elements__image" src="#" alt="#">
+       <div class="elements__element-case">
+           <h2 class="elements__name"></h2>
+           <button class="elements__like-button" type="button" aria-label="Нравится"></button>
+       </div>
+     </li>
 
-  <div class="popup popup_image">
-    <div class="popup__container-image">
-      <button class="popup__closed" type="button"></button>
-      <figure class="popup__figure-image">
-        <img src="#" alt="#" class="popup__image-open">
-        <figcaption class="popup__text-open"></figcaption>
-      </figure>
-    </div>
-  </div>
-
-
-  <template class="template">
-    <li class="elements__element">
-      <button class="elements__trash" type="button"></button>
-      <img class="elements__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg"
-        alt="Архыз">
-      <div class=" elements__bottom-card">
-        <h2 class="elements__title">Архыз</h2>
-        <button class="elements__like" type="button" aria-label="лайк">
-        </button>
-      </div>
-    </li>
-  </template>
+ </template>
 
   <script src="./scripts/validation.js"></script>
   <script src="./scripts/cards.js"></script>

@@ -1,13 +1,13 @@
 //переменные для валидации
 const validationConfig = {
-  allforms: document.forms, //все формы
-  inputSelector: '.form__input', //inputList
-  submitButtonSelector: '.form__submit', //button
-  errorSelector: '.form__error_type_', //шаблон для инпутов
+  allforms: document.forms, 
+  inputSelector: '.popup__input', 
+  submitButtonSelector: '.popup__button-submit', 
+  errorSelector: '.popup__error_type_', 
 
-  inactiveButtonClass: 'form__submit_inactive', //кнопка выкл
-  inputErrorClass: 'form__input_invalid', //инпут
-  errorTextClass: 'form__error_visible', //спан текст ошибки
+  inactiveButtonClass: 'popup__button-submit_inactive', 
+  inputErrorClass: 'popup__input_invalid', 
+  errorTextClass: 'popup__error_visible', 
 };
 
 //валидация
@@ -41,14 +41,14 @@ function checkValidity(input, errorSelector, inputErrorClass, errorTextClass){
 //показать ошибку
 function showInputError(input, errorTextElement, inputErrorClass, errorTextClass){
   input.classList.add(inputErrorClass);
-  errorTextElement.textContent = input.validationMessage;//???
+  errorTextElement.textContent = input.validationMessage;
   errorTextElement.classList.add(errorTextClass);
 }
 
 //скрыть ошибку
 function hideInputError(input, errorTextElement, inputErrorClass, errorTextClass){
   input.classList.remove(inputErrorClass);
-  // errorTextElement.textContent = '';
+  errorTextElement.textContent = '';
   errorTextElement.classList.remove(errorTextClass);
 }
 
